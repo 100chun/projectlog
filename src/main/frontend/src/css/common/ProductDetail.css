@@ -1,0 +1,391 @@
+@import '../common/CommonStyles.css';
+
+/* 페이지 레이아웃 */
+.product-detail-page {
+    width: 100%;
+    padding: var(--spacing-xl) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 상품 상세 상단 영역 */
+.product-detail-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: var(--spacing-xl);
+    padding: 0 var(--container-padding);
+    justify-content: center;
+}
+
+.product-detail-left, 
+.product-detail-right {
+    flex: 1;
+}
+
+.product-detail-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+}
+
+/* 상품 정보 영역 */
+.delivery-type {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius-sm);
+    font-size: 14px;
+    margin-bottom: var(--spacing-md);
+}
+
+.product-info h2 {
+    font-size: 24px;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+    line-height: 1.36;
+    color: var(--text-primary);
+}
+
+.product-subTitle {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* 가격 정보 */
+.price-info-detail {
+    margin: var(--spacing-lg) 0;
+}
+
+.price-info-detail .price-wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.price-info-detail .discount {
+    color: var(--discount-color);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.price-info-detail .price {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.price-info-detail .original-price {
+    color: var(--text-tertiary);
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+/* 상품 옵션 */
+.product-options {
+    margin: var(--spacing-lg) 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-options p {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* 수량 조절 */
+.amount-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    width: fit-content;
+    margin: var(--spacing-lg) 0;
+}
+
+.amount-control button {
+    width: var(--button-height-md);
+    height: var(--button-height-md);
+    border: none;
+    background-color: var(--bg-primary);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.amount-control span {
+    width: 50px;
+    text-align: center;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    line-height: var(--button-height-md);
+}
+
+/* 총 가격 */
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.total-price .total {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+/* 버튼 그룹 */
+.button-group {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.detail-cart-button,
+.detail-buy-button {
+    width: 100%;
+    margin: 0 auto;
+    height: var(--button-height-lg);
+    border-radius: var(--border-radius-sm);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.detail-cart-button {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.detail-cart-button:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-primary);
+}
+
+.detail-buy-button {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.detail-buy-button:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-primary);
+}
+
+/* 탭 영역 */
+.product-detail-tabs {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: var(--bg-primary);
+    z-index: 100;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.tab-buttons {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md) var(--container-padding);
+}
+
+.tab-button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition-normal);
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* 상품 설명 영역 */
+.product-detail-main {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--container-padding);
+}
+
+.product-detail-main h4 {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.product-detail-main h1 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.product-detail-main span {
+    display: block;
+    text-align: left;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    white-space: pre-wrap;
+}
+
+.product-detail-main hr {
+    border: none;
+    border-top: 1px solid var(--border-light);
+    margin: var(--spacing-lg) 0;
+}
+
+/* 리뷰 영역 */
+.product-reviews,
+.product-inquiries {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--container-padding);
+}
+
+.review-header,
+.inquiry-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.review-notice,
+.inquiry-notice {
+    width: 100%;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.review-notice p,
+.inquiry-notice p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.write-inquiry {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--primary-color);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+}
+
+/* 스크롤 관련 */
+#product-description,
+#product-reviews,
+#product-inquiries {
+    scroll-margin-top: 80px;
+}
+
+/* 리뷰/문의 목록 공통 스타일 */
+.review-list,
+.inquiry-list {
+    border-top: 1px solid var(--border-color);
+}
+
+.review-item,
+.inquiry-item {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-light);
+    transition: var(--transition-normal);
+}
+
+.review-item:hover,
+.inquiry-item:hover {
+    background-color: var(--bg-secondary);
+}
+
+.review-item-header,
+.inquiry-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.review-item-title,
+.inquiry-item-title {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.review-item-date,
+.inquiry-item-date {
+    color: var(--text-tertiary);
+    font-size: 14px;
+}
+
+.review-item-content,
+.inquiry-item-content {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 페이지네이션 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+}
+
+.page-button {
+    width: var(--button-height-md);
+    height: var(--button-height-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-button:hover:not(.disabled) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.page-button.disabled {
+    cursor: not-allowed;
+    color: var(--text-tertiary);
+    border-color: var(--border-light);
+    background-color: var(--bg-secondary);
+}
+

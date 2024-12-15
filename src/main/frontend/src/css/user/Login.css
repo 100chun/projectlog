@@ -1,0 +1,211 @@
+.login-container {
+    width: 340px;
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--container-padding);
+}
+
+.login-container h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.login-input {
+    width: 100%;
+    height: var(--input-height);
+    padding: 0 var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition-normal);
+}
+
+.login-input:focus {
+    border-color: var(--primary-color);
+}
+
+.login-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.find-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.find-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.find-links .divider {
+    color: var(--border-color);
+    margin: 0 var(--spacing-xs);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.login-button {
+    width: 100%;
+    height: var(--button-height-lg);
+    background-color: var(--primary-color);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.login-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.register-link {
+    width: 100%;
+    height: var(--button-height-lg);
+    background-color: var(--bg-primary);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.register-link:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* 소셜 로그인 스타일 */
+.social-login {
+    margin-top: var(--spacing-xl);
+    text-align: center;
+}
+
+.social-title {
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.social-title::before,
+.social-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.social-title::before {
+    right: calc(50% + 70px);
+}
+
+.social-title::after {
+    left: calc(50% + 70px);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+}
+
+.social-button {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-normal);
+}
+
+.social-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-button span {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: var(--text-primary);
+    white-space: nowrap;
+    font-weight: bold;
+ 
+}
+
+.kakao {
+    background-color: #FEE500;
+}
+
+.naver {
+    background-color: #03C75A;
+}
+
+.google {
+    background-color: white;
+    border: 1px solid var(--border-color);
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+}

@@ -1,0 +1,335 @@
+/* ==========================================================================
+   1. Reset & Base
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Freesentation-9Black';
+    list-style: none;
+}
+
+/* ==========================================================================
+   2. Typography
+   ========================================================================== */
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   3. Common Elements
+   ========================================================================== */
+/* Links */
+a {
+    text-decoration: none;
+    color: rgb(51,51,51);
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: rgb(95, 0, 128);
+}
+
+/* ==========================================================================
+   4. Slider
+   ========================================================================== */
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* 메인 슬라이더 화살표 */
+.slide-main .slick-prev,
+.slide-main .slick-next {
+    width: 52px !important;
+    height: 52px !important;
+    z-index: 1000 !important;
+    background-color: rgba(128, 128, 128, 0.7) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide-main:hover .slick-prev,
+.slide-main:hover .slick-next {
+    opacity: 1;
+}
+
+/* 상품 슬라이더 화살표 */
+.slider-container .slick-prev,
+.slider-container .slick-next {
+    width: 60px !important;
+    height: 60px !important;
+    z-index: 10000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: absolute;
+    top: 35% !important;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 1 !important;
+}
+
+/* 각각의 위치 설정 */
+.slide-main .slick-prev {
+    left: 250px !important;
+}
+
+.slide-main .slick-next {
+    right: 250px !important;
+}
+
+.slider-container .slick-prev {
+    left: -30px !important;
+}
+
+.slider-container .slick-next {
+    right: -30px !important;
+}
+
+/* next 버튼의 SVG 회전 */
+.slider-container .slick-next svg {
+    transform: rotate(180deg);
+}
+
+/* 공통 스타일 */
+.slick-prev:before, 
+.slick-next:before {
+    display: none !important;
+}
+
+.custom-arrow {
+    width: 100%;
+    height: 100%;
+}
+
+.custom-arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   5. Section Common
+   ========================================================================== */
+.section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 5%;
+    margin-bottom: 40px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section-container {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: rgb(51, 51, 51);
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.26px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.45;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: rgb(153, 153, 153);
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   6. Product Slider
+   ========================================================================== */
+.slider-container {
+    position: relative;
+    margin: 0 -2%;
+    padding: 0 1%;
+}
+
+.slider-container .slick-slide {
+    padding: 0 5px; 
+}
+
+.slider-container .slick-track {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* SVG 크기 조정 */
+.slider-container .slick-prev svg,
+.slider-container .slick-next svg {
+    width: 60px;
+    height: 60px;
+}
+
+/* 이전/다음으로 넘어갈 슬라이드가 없을 때 화살표 숨김 */
+.slider-container .slick-prev.slick-disabled,
+.slider-container .slick-next.slick-disabled {
+    opacity: 0 !important;
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+/* ==========================================================================
+   7. Product Item
+   ========================================================================== */
+.product-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 7px;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* 이미지 컨테이너 스타일 */
+.product-image {
+    order: 1;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* 이미지 스타일 */
+.product-image img {
+    width: 100%;
+    aspect-ratio: 249/320;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 이미지 호버 효과 */
+.product-image:hover img {
+    transform: scale(1.05);
+}
+
+.cart-button {
+    order: 2;
+    width: 100%;
+    height: 36px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 10px 0;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    transition: all 0.3s ease;
+}
+
+.cart-button:hover {
+    background-color: rgb(95, 0, 128);
+    border-color: rgb(95, 0, 128);
+    color: white;
+}
+
+.cart-button:hover svg path {
+    stroke: white;
+}
+
+.cart-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.product-info {
+    order: 3;
+    margin-top: 0;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    line-height: 1.45;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.product-link:hover .product-info h3 {
+    text-decoration: none;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.price-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.discount {
+    font-size: 16px;
+    font-weight: 800;
+    color: rgb(250, 98, 47);
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 800;
+    color: rgb(51, 51, 51);
+}
+
+.original-price {
+    font-size: 14px;
+    color: rgb(181, 181, 181);
+    text-decoration: line-through;
+}
+
+/* ==========================================================================
+   8.center Image
+   ========================================================================== */
+.center-image {
+    display: flex;
+    justify-content: center;
+}
+
+/* 순서 변경을 위한 스타일 조정 */
+.product-image {
+    order: 1;
+    margin-bottom: 10px;
+}
+
+.product-info {
+    order: 3;
+    margin-top: 0;
+}
+

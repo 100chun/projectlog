@@ -1,0 +1,375 @@
+.register {
+    width: 640px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.register h2 {
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.register-required {
+    padding: 10px 0;
+    border-bottom: 2px solid #333;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.required-text {
+    color: #333;
+    font-size: 12px;
+}
+
+.required {
+    color: #ee6a7b;
+    margin-left: 2px;
+}
+
+.register-form-item {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f4f4f4;
+    align-items: center;
+}
+
+.register-form-item label {
+    width: 140px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+}
+
+.input-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-wrapper input {
+    width: 332px;
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.input-wrapper input:focus {
+    border-color: #333;
+}
+
+.input-wrapper input.error {
+    border-color: #ee6a7b;
+}
+
+.check-button, .auth-button {
+    width: 120px;
+    height: 44px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #5f0080;
+    border: 1px solid #5f0080;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.address-search-button {
+    width: 100%;
+    height: 44px;
+    background-color: white;
+    color: #5f0080;
+    border: 1px solid #5f0080;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.register-button {
+    width: 240px;
+    height: 56px;
+    background-color: #5f0080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #4c006c;
+}
+
+.email-wrapper {
+    flex-direction: row !important;
+    align-items: center;
+}
+
+.email-wrapper input,
+.email-wrapper select {
+    width: 150px;
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.email-at {
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    height: 44px;
+}
+
+.email-select {
+    width: 120px;
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+.address.input-wrapper {
+    flex-direction: column;
+}
+
+.address-guide {
+    color: #666;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 95px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.radio-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #5f0080;
+}
+
+.radio-label span {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.birth-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.birth-input input {
+    width: 100px;
+    text-align: center;
+}
+
+.birth-separator {
+    color: #333;
+}
+
+.register-button-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.error-message {
+    color: #ee6a7b;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-left: 0;
+    display: block;
+}
+
+.input-wrapper.with-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-wrapper.with-button > div {
+    display: flex;
+    gap: 8px;
+}
+
+.input-btn-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.error-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.error-message {
+    color: #ee6a7b;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.input-wrapper.with-button input {
+    width: 332px;
+}
+
+/* 이용약관 섹션 스타일 */
+.terms-section {
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.terms-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.terms-all {
+    padding: 12px 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.terms-description {
+    margin-top: 4px;
+    margin-left: 36px;
+    color: #666;
+    font-size: 13px;
+}
+
+.terms-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.terms-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #5f0080;
+}
+
+.required-text {
+    color: #ee6a7b;
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+.choice-text {
+    color: #999;
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+.terms-view {
+    border: none;
+    background: none;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.terms-sub-group {
+    display: flex;
+    gap: 16px;
+    margin-left: 36px;
+}
+
+.terms-sub-group .checkbox-label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 주소 입력 관련 스타일 추가 */
+.address-input,
+.address-detail-input {
+    width: 100% !important;
+    margin-bottom: 8px;
+}
+
+.address-change-button {
+    width: 120px;
+    height: 44px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #5f0080;
+    border: 1px solid #5f0080;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.address-search-button {
+    width: 100%;
+    height: 44px;
+    background-color: #5f0080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}

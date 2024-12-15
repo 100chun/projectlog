@@ -1,0 +1,95 @@
+/* 레이아웃 */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 버튼 스타일 */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--bg-primary);
+}
+
+.button-secondary {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+/* 입력 필드 */
+.input-base {
+    height: var(--input-height);
+    padding: 0 var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--bg-primary);
+    transition: var(--transition-normal);
+}
+
+.input-base:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* 상품 관련 */
+.price-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.price-wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.discount {
+    color: var(--discount-color);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* 유틸리티 클래스 */
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+} 

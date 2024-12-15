@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.0'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // VALIDATION
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '8.0.1.Final'
+    implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.1.0'
+
+    //REST
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.18.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.18.1'
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.18.1'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+    //MAIL
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

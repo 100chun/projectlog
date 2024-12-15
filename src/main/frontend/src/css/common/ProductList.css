@@ -1,0 +1,8 @@
+@import '../common/CommonStyles.css';
+
+.product-list-page {
+    width: 100%;
+}
+
+/* 기존 고유한 스타일들만 유지... */
+

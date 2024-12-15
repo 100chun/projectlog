@@ -1,0 +1,126 @@
+.product-register-container {
+    max-width: 800px;
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--container-padding);
+}
+
+.product-register-container h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-primary);
+}
+
+.product-register-form {
+    background: var(--bg-primary);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.image-preview {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.image-preview img {
+    max-width: 200px;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.submit-button {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    margin-top: var(--spacing-lg);
+}
+
+.submit-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* 파일 선택 input 스타일링 */
+.form-group input[type="file"] {
+    margin: var(--spacing-md) var(--spacing-sm);
+    display: block;
+    width: calc(100% - var(--spacing-lg));
+    padding: var(--spacing-md) var(--spacing-md);
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.form-group input[type="file"]:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.image-preview-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.image-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+}
+
+.remove-image-btn {
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--spacing-xs);
+    background-color: rgba(255, 0, 0, 0.7);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.remove-image-btn:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+ 

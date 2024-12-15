@@ -1,0 +1,60 @@
+:root {
+    /* 브랜드 컬러 */
+    --primary-color: #5f0080;
+    --primary-dark: #4c006c;
+    
+    /* 시스템 컬러 */
+    --success-color: #00c73c;
+    --warning-color: #ff6b6b;
+    --discount-color: rgb(250, 98, 47);
+    
+    /* 텍스트 컬러 */
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-tertiary: #999;
+    --text-disabled: #ccc;
+    
+    /* 배경 컬러 */
+    --bg-primary: #fff;
+    --bg-secondary: #f7f7f7;
+    --bg-tertiary: #f1f1f1;
+    
+    /* 보더 컬러 */
+    --border-color: #ddd;
+    --border-light: #eee;
+    
+    /* 그림자 */
+    --shadow-inset: rgb(247, 247, 247) 0px 0px 0px 1px inset;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+    
+    /* 스페이싱 */
+    --spacing-xs: 4px;    /* 최소 간격 */
+    --spacing-sm: 8px;    /* 작은 간격 */
+    --spacing-md: 12px;   /* 중간 간격 */
+    --spacing-lg: 16px;   /* 큰 간격 */
+    --spacing-xl: 24px;   /* 최대 간격 */
+    
+    /* 레이아웃 */
+    --max-width: 1050px;
+    --container-padding: 20px;
+    --header-height: 80px;
+    
+    /* 컴포넌트 사이즈 */
+    --button-height-sm: 32px;
+    --button-height-md: 36px;
+    --button-height-lg: 44px;
+    --input-height: 44px;
+    --search-height: 50px;
+    
+    /* 반응형 브레이크포인트 */
+    --breakpoint-mobile: 768px;
+    --breakpoint-tablet: 1024px;
+    
+    /* 기타 */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+} 
